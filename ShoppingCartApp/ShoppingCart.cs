@@ -9,37 +9,56 @@ namespace ShoppingCartApp
             _items = new List<CartItem>();
         }
 
-        // Ha az item neve már szerepel (kis-nagybetű független), növeli a mennyiségét
         public void AddItem(string name, double unitPrice, int quantity)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentException("A név nem lehet null vagy üres.");
+            if (unitPrice <= 0)
+                throw new ArgumentException("Az egységár csak pozitív szám lehet.");
+            if (quantity < 1)
+                throw new ArgumentException("A mennyiség legalább 1 kell legyen.");
+
+            CartItem existing = _items.FirstOrDefault(i => i.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+
+            if (existing != null)
+            {
+                existing.UpdateQuantity(existing.Quantity + quantity);
+            }
+            else
+            {
+                _items.Add(new CartItem(name, unitPrice, quantity));
+            }
         }
 
-        // true ha megtalálta és törölte, false ha nem szerepelt
         public bool RemoveItem(string name)
         {
-            throw new NotImplementedException();
+            CartItem existing = _items.FirstOrDefault(i => i.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+
+            if (existing == null)
+                return false;
+
+            _items.Remove(existing);
+            return true;
         }
 
         public int GetItemCount()
         {
-            throw new NotImplementedException();
+            return _items.Count;
         }
 
-        // Összeg = minden item (UnitPrice * Quantity) összege
         public decimal GetTotal()
         {
-            throw new NotImplementedException();
+            return _items.Sum(i => (decimal)i.GetLineTotal());
         }
 
         public IReadOnlyList<CartItem> GetItems()
         {
-            throw new NotImplementedException();
+            return _items.AsReadOnly();
         }
 
         public void Clear()
         {
-            throw new NotImplementedException();
+            _items.Clear();
         }
     }
 }
