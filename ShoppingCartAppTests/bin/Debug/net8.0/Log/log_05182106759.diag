@@ -1,0 +1,16 @@
+2026-05-18T21:32:06.7658661+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.4.1+4f4ed7d3ce76cfa6e671c7a55f8b9cb6f2cb35c5
+2026-05-18T21:32:06.7857441+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2026-05-18T21:32:06.7869573+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2026-05-18T21:32:06.7869634+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 21:32:06.731
+2026-05-18T21:32:06.7882565+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 10804
+2026-05-18T21:32:06.7883908+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 8.0.23
+2026-05-18T21:32:06.7884003+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.23\System.Private.CoreLib.dll
+2026-05-18T21:32:06.7884084+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2026-05-18T21:32:06.7884146+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Users\nicho\Desktop\shopee\ShoppingCartAppTests\bin\Debug\net8.0\ShoppingCartAppTests.dll
+2026-05-18T21:32:06.7885840+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Users\nicho\Desktop\shopee\ShoppingCartAppTests\bin\Debug\net8.0\Log --results-directory C:\Users\nicho\Desktop\shopee\ShoppingCartApp\TestResults --client-port 64664'
+2026-05-18T21:32:06.7896809+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2026-05-18T21:32:06.8091172+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2026-05-18T21:32:06.8120605+00:00 Microsoft.Testing.Platform.Configurations.JsonConfigurationSource+JsonConfigurationProvider INFORMATION Config file 'C:\Users\nicho\Desktop\shopee\ShoppingCartAppTests\bin\Debug\net8.0\ShoppingCartAppTests.testconfig.json' not found.
+2026-05-18T21:32:06.8130830+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable:  VSTest mode: False
+2026-05-18T21:32:06.9692846+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTest.Sdk' Version: '3.6.1' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2026-05-18T21:32:07.0753819+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter INFORMATION Test Parallelization enabled for C:\Users\nicho\Desktop\shopee\ShoppingCartAppTests\bin\Debug\net8.0\ShoppingCartAppTests.dll (Workers: 8, Scope: MethodLevel)
