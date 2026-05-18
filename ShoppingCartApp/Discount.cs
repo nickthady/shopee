@@ -2,24 +2,26 @@ namespace ShoppingCartApp
 {
     public class Discount
     {
-        // percent: 0–100 között, különben ArgumentException
-        // Példa: ApplyPercentage(200, 10) -> 180
         public double ApplyPercentage(double total, double percent)
         {
-            throw new NotImplementedException();
+            if (percent < 0 || percent > 100)
+                throw new ArgumentException("A százalék csak 0 és 100 közé eshet.");
+
+            return total * (1 - percent / 100);
         }
 
-        // Az eredmény soha nem lehet negatív — ha a kedvezmény nagyobb, 0-t ad vissza
-        // Példa: ApplyFixed(100, 50) -> 50
         public double ApplyFixed(double total, double discountAmount)
         {
-            throw new NotImplementedException();
+            if (discountAmount < 0)
+                throw new ArgumentException("A kedvezmény nem lehet negatív.");
+
+            double result = total - discountAmount;
+            return result < 0 ? 0 : result;
         }
 
-        // true ha discountValue > 0
-        public bool IsValid(double discountValue)
+        public bool IsValid(double amount)
         {
-            throw new NotImplementedException();
+            return amount > 0;
         }
     }
 }
