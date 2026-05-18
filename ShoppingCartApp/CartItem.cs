@@ -6,22 +6,30 @@ namespace ShoppingCartApp
         public double UnitPrice { get; }
         public int Quantity { get; private set; }
 
-        // name nem lehet null/üres, unitPrice > 0, quantity >= 1
         public CartItem(string name, double unitPrice, int quantity)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentException("A név nem lehet null vagy üres.");
+            if (unitPrice <= 0)
+                throw new ArgumentException("Az egységár csak pozitív szám lehet.");
+            if (quantity < 1)
+                throw new ArgumentException("A mennyiség legalább 1 kell legyen.");
+
+            Name = name;
+            UnitPrice = unitPrice;
+            Quantity = quantity;
         }
 
-        // UnitPrice * Quantity
         public double GetLineTotal()
         {
-            throw new NotImplementedException();
+            return UnitPrice * Quantity;
         }
 
-        // quantity >= 1, különben ArgumentException
         public void UpdateQuantity(int quantity)
         {
-            throw new NotImplementedException();
+            if (quantity < 1)
+                throw new ArgumentException("A mennyiség legalább 1 kell legyen.");
+            Quantity = quantity;
         }
     }
 }
